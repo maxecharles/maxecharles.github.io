@@ -1,204 +1,69 @@
-<!DOCTYPE HTML>
-<!--
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Prologue by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home — Max Charles</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700%7CRoboto+Mono&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-		<!-- Header -->
-			<div id="header">
+<body>
+  <div class="sidebar" id="sidebar">
+    <h2 style="display: flex; align-items: center;">
+      Max Charles
+      <img src="images/io_transparent.gif" alt="Max Charles" style="width: 50px; height: 50px; border-radius: 50%; margin-left: 10px;">
+    </h2>
+    <nav class="nav-links">
+      <a href="index.html"class="active">Home</a>
+      <a href="research.html">Research</a>
+      <a href="music.html">Music</a>
+      <a href="cv.html">CV</a>
+      <img src="images/avatar.jpg" alt="Sidebar Image" style="width: 100%; margin-top: 1em; border-radius: 80px;">
+      <p style="margin-top: 1em; font-size: 0.9em;">
+        <span style="display: flex; align-items: center;"><span class="material-icons" style="font-size: 1.2em; margin-right: 5px;">email</span><a href="mailto:max.charles@sydney.edu.au">max.charles@sydney.edu.au</a></span>
+        <span style="display: flex; align-items: center; margin-top: 0.5em;">
+          <svg style="width: 1.2em; height: 1.2em; margin-right: 5px;" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+          </svg>
+          <a href="https://instagram.com/maxcharles_music" target="_blank">@maxcharles_music</a>
+        </span></svg>
+      </p>
+    </nav>
+  </div>
 
-				<div class="top">
+  <!-- <header>
+    <span class="material-icons menu-button" onclick="toggleSidebar()">menu</span>
+    <h1>Max ch ch charles</h1>
+  </header> -->
 
-					<!-- Logo -->
-						<div id="logo">
-							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
-							<h1 id="title">Max Charles</h1>
-							<p>Astrophysics PhD Candidate</p>
-						</div>
+  <main>
+    <h2>Homepage</h2>
+    <p>
+      I am <strong>Max Charles</strong>, a budding astrophysicist completing my PhD, and this is my homepage. I love space and writing code, especially in JAX. I am currently living/studying in Sydney on Gadigal country, and I grew up in Wollongong on Dharawal country. I also enjoy playing pool, football (goalkeeper), and astrophotography. Click on the image below to find out more about my research!
+    </p>
+    <a href="research.html" style="cursor: pointer; display: inline-block;">
+      <img src="images/SAM.JPG" alt="me at my desk" style="max-width: 800px; border-radius: 8px; margin: 20px 0; transition: opacity 0.3s ease, transform 0.2s ease;" onmouseover="this.style.opacity='0.8'; this.style.transform='scale(1.02)';" onmouseout="this.style.opacity='1'; this.style.transform='scale(1)';">
+    </a>
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-								<li><a href="#Publications" id="Publications-link"><span class="icon solid fa-th">Publications</span></a></li>
-								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
-							</ul>
-						</nav>
+    <p></p>
+      I am also an amateur musician and passionate songwriter, mostly of alt-rock but I do enjoy experimenting! I have a bunch of music on Spotify dating back to when I was 15 — click below to find out more.
+    <a href="music.html" style="cursor: pointer; display: inline-block;">
+      <img src="images/guitar.JPG" alt="me with a guitar" style="max-width: 800px; border-radius: 8px; margin: 20px 0; transition: opacity 0.3s ease, transform 0.2s ease;" onmouseover="this.style.opacity='0.8'; this.style.transform='scale(1.02)';" onmouseout="this.style.opacity='1'; this.style.transform='scale(1)';">
+    </a>
 
-				</div>
+    
+  </main>
 
-				<div class="bottom">
+  <footer>
+    © 2025 Max Charles · Inspired by Material for MkDocs
+  </footer>
 
-					<!-- Social Icons -->
-						<ul class="icons">
-							<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
-							<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li> -->
-							<li><a href="https://github.com/maxecharles/" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<!-- <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li> -->
-							<!-- <li><a href="max.charles@sydney.edu.au" class="icon solid fa-envelope"><span class="label">Email</span></a></li> -->
-						</ul>
-
-				</div>
-
-			</div>
-
-		<!-- Main -->
-			<div id="main">
-
-				<!-- Intro -->
-					<section id="top" class="one dark cover">
-						<div class="container">
-
-							<header>
-								<h2 class="alt">Max Charles</h2>
-								<p>Astrophysics PhD Candidate</p>
-							</header>
-
-							<!-- <footer>
-								<a href="#Publications" class="button scrolly">Magna Aliquam</a>
-							</footer> -->
-
-						</div>
-					</section>
-
-				<!-- About Me -->
-					<section id="about" class="three">
-						<div class="container">
-
-							<header>
-								<h2>About Me</h2>
-							</header>
-
-							<!-- <a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a> -->
-
-							<p>I am a PhD Candidate studying with the Sydney Institute for Astronomy 
-							(SIfA) at the University of Sydney. Supervised by 
-							<a href="https://benjaminpope.github.io">A/Prof Benjamin Pope</a> 
-							(Macquarie University) and <a href="https://www.physics.usyd.edu.au/~gekko">Prof Peter Tuthill</a> 
-							(SIfA), I am mostly focusing on developing interferometric image reconstruction methods, 
-							and applying them to data from the interferometer onboard the James Webb Space Telescope.
-							</p>
-
-						</div>
-					</section>
-
-				<!-- Publications -->
-					<section id="Publications" class="two">
-						<div class="container">
-
-							<header>
-								<h2>Publications</h2>
-							</header>
-
-							<p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
-							egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus.
-							Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis
-							fusce hendrerit lacus ridiculus.</p>
-
-							<div class="row">
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-										<header>
-											<h3>Ipsum Feugiat</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-										<header>
-											<h3>Rhoncus Semper</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-										<header>
-											<h3>Magna Nullam</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-										<header>
-											<h3>Natoque Vitae</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-										<header>
-											<h3>Dolor Penatibus</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-										<header>
-											<h3>Orci Convallis</h3>
-										</header>
-									</article>
-								</div>
-							</div>
-
-						</div>
-					</section>
-
-				<!-- Contact -->
-					<section id="contact" class="four">
-						<div class="container">
-
-							<header>
-								<h2>Contact</h2>
-							</header>
-
-							<p>Please feel free to reach out to me about anything!</p>
-
-							<form method="post" action="#">
-								<div class="row">
-									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
-									<div class="col-12">
-										<textarea name="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<input type="submit" value="Send Message" />
-									</div>
-								</div>
-							</form>
-
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Footer -->
-			<div id="footer">
-
-				<!-- Copyright -->
-					<!-- <ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul> -->
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+    }
+  </script>
+</body>
 </html>
