@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Max Charles</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700%7CRoboto+Mono&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="sidebar" id="sidebar">
+    <h2 style="display: flex; align-items: center;">
+      Max Charles
+      <img src="images/io_transparent.gif" alt="Max Charles" style="width: 50px; height: 50px; border-radius: 50%; margin-left: 10px;">
+    </h2>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="research.html" class="active">Research</a>
+      <a href="music.html">Music</a>
+      <a href="cv.html">CV</a>
+      <img src="images/avatar.jpg" alt="Sidebar Image" style="width: 100%; margin-top: 1em; border-radius: 80px;">
+      <p style="margin-top: 1em; font-size: 0.9em;">
+        <span style="display: flex; align-items: center;"><span class="material-icons" style="font-size: 1.2em; margin-right: 5px;">email</span><a href="mailto:max.charles@sydney.edu.au">max.charles@sydney.edu.au</a></span>
+        <span style="display: flex; align-items: center; margin-top: 0.5em;">
+          <svg style="width: 1.2em; height: 1.2em; margin-right: 5px;" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+          </svg>
+          <a href="https://instagram.com/maxcharles_music" target="_blank">@maxcharles_music</a>
+        </span></svg>
+      </p>
+    </nav>
+  </div>
+
+  <main>
+
+    <p>
+      Here I have a brief description of my current research projects. Click on the images to take you to the relevant publications!
+    </p>
+    <h2>Aperture Masking Interferometry on JWST</h2>
+    <p>
+      On board the <i>James Webb Space Telescope</i> is the Aperture Masking Interferometer (AMI), which is a thin piece of titanium metal with several holes cut out of it, sitting in the primary beam of the telescope. These holes cause interferometric fringes to form on the detector, which makes raw AMI data look very different to normal images (see top row of image below).
+    </p>
+    <a href="https://arxiv.org/abs/2510.10924" style="cursor: pointer; display: inline-block;">
+      <img src="images/PRESS6PANEL_1.jpeg" alt="Image Reconstruction" style="max-width: 800px; border-radius: 8px; margin: 20px 0; transition: opacity 0.3s ease, transform 0.2s ease;" onmouseover="this.style.opacity='0.8'; this.style.transform='scale(1.02)';" onmouseout="this.style.opacity='1'; this.style.transform='scale(1)';">
+    </a>
+    <p>
+      However, when it came to analysing AMI data, there was an unexpected complication: the infrared detector suffered from severe charge bleeding, which distorted the interferometric measurements. In his PhD, my colleague <a href="https://github.com/LouisDesdoigts/LouisDesdoigts" target="_blank" style="color: #58a6ff;">Dr. Louis Desdoigts</a> developed <a href="https://louisdesdoigts.github.io/amigo/" target="_blank" style="color: #58a6ff;">amigo</a>, a software designed to model and mitigate these detector effects (among other things) for AMI data. I have extended this by developing <a href="https://maxecharles.github.io/dorito" target="_blank" style="color: #58a6ff;">dorito</a>, an software used to reconstruct images from AMI data (see bottom row of above image).
+    </p>
+    <img src="images/smh.png" alt="SMH" style="width: 100%; max-width: 800px; margin: 2em 0; border-radius: 8px;">
+    <img src="images/telescope.jpg" alt="Telescope" style="width: 100%; max-width: 800px; margin: 2em 0; border-radius: 8px;">
+
+    <!-- <h2>TOLIMAN Jitter Modelling</h2> -->
+
+
+
+  </main>
+
+  <footer>
+    © 2025 Max Charles
+  </footer>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
