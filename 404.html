@@ -3,43 +3,87 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About — Max Charles</title>
+  <title>404 - Page Not Found — Max Charles</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700%7CRoboto+Mono&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/sidebar.css">
+  <link rel="stylesheet" href="assets/css/topbar.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="sidebar" id="sidebar">
-    <h2>Max Charles</h2>
+    <h2 style="display: flex; align-items: center;">
+      Max Charles
+      <img src="images/io_transparent.gif" alt="Max Charles" style="width: 50px; height: 50px; border-radius: 50%; margin-left: 10px;">
+    </h2>
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="research.html">Research</a>
       <a href="music.html">Music</a>
       <a href="cv.html">CV</a>
-        </nav>
-      </div>
+      <img src="images/avatar.jpg" alt="Sidebar Image" style="width: 100%; margin-top: 1em; border-radius: 80px;">
+      <p style="margin-top: 1em; font-size: 0.9em;">
+        <span style="display: flex; align-items: center;"><span class="material-icons" style="font-size: 1.2em; margin-right: 5px;">email</span><a href="mailto:max.charles@sydney.edu.au">max.charles@sydney.edu.au</a></span>
+        <span style="display: flex; align-items: center; margin-top: 0.5em;">
+          <svg style="width: 1.2em; height: 1.2em; margin-right: 5px;" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+          </svg>
+          <a href="https://instagram.com/maxcharles_music" target="_blank">@maxcharles_music</a>
+        </span>
+      </p>
+    </nav>
+  </div>
 
-      <header>
-        <span class="material-icons menu-button" onclick="toggleSidebar()">menu</span>
-        <h1>About</h1>
-      </header>
+  <div class="topbar" id="topbar">
+    <a href="index.html" class="topbar-brand">
+      Max Charles
+      <img src="images/io_transparent.gif" alt="Max Charles">
+    </a>
+    <nav class="topbar-nav">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="music.html">Music</a>
+      <a href="cv.html">CV</a>
+    </nav>
+    <span class="material-icons menu-button" onclick="toggleMenu()">menu</span>
+  </div>
 
-      <main>
-        <h2>About Me</h2>
-        <p>
-            Sorry, this page does not exist!
-        </p>
-      </main>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="music.html">Music</a>
+    <a href="cv.html">CV</a>
+  </div>
 
-      <footer>
-        © 2025 Max Charles
-      </footer>
+  <main>
+    <div style="text-align: center; padding: 4rem 0;">
+      <h2 style="font-size: 4rem; margin: 0; color: var(--md-accent);">404</h2>
+      <h3 style="margin: 1rem 0; color: var(--md-primary);">Page Not Found</h3>
+      <p style="margin: 2rem 0; font-size: 1.1rem;">
+        Sorry, the page you're looking for doesn't exist.
+      </p>
+      <a href="index.html" style="display: inline-block; background: var(--md-primary); color: var(--md-bg); padding: 0.75rem 1.5rem; border-radius: var(--md-border-radius); text-decoration: none; font-weight: 600; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">Go Home</a>
+    </div>
+  </main>
 
-      <script>
-        function toggleSidebar() {
-      document.getElementById('sidebar').classList.toggle('open');
-        }
-      </script>
+  <footer>
+    © 2025 Max Charles · Inspired by Material for MkDocs
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      // Check if we're in portrait mode (topbar) or landscape mode (sidebar)
+      if (window.matchMedia("(max-width: 800px) and (orientation: portrait)").matches) {
+        // Portrait mode - toggle mobile menu
+        document.getElementById('mobile-menu').classList.toggle('open');
+      } else if (window.matchMedia("(max-width: 800px) and (orientation: landscape)").matches) {
+        // Landscape mode - toggle sidebar
+        document.getElementById('sidebar').classList.toggle('open');
+      }
+    }
+
+  </script>
     </body>
     </html>

@@ -1,0 +1,122 @@
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--topbar-height);
+  background: var(--md-surface);
+  border-bottom: 1px solid var(--overlay-bg);
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  box-shadow: var(--shadow-default);
+  z-index: 101;
+}
+
+.topbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--md-primary);
+  text-decoration: none;
+}
+
+.topbar-brand img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-left: 8px;
+}
+
+.topbar-nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.topbar-nav a {
+  text-decoration: none;
+  color: var(--md-text);
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--md-border-radius);
+  transition: background-color 0.2s, color 0.2s;
+  font-size: 0.9rem;
+}
+
+.topbar-nav a:hover,
+.topbar-nav a.active {
+  background-color: var(--overlay-bg);
+  color: var(--md-accent);
+}
+
+.menu-button {
+  margin-right: 1rem;
+  cursor: pointer;
+  color: var(--md-text);
+  display: none;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: var(--topbar-height);
+  left: 0;
+  right: 0;
+  background: var(--md-surface);
+  border-bottom: 1px solid var(--overlay-bg);
+  box-shadow: var(--shadow-default);
+  display: none;
+  flex-direction: column;
+  padding: 1rem;
+  z-index: 100;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: var(--md-text);
+  padding: 0.75rem 1rem;
+  border-radius: var(--md-border-radius);
+  transition: background-color 0.2s, color 0.2s;
+  margin-bottom: 0.5rem;
+}
+
+.mobile-menu a:hover,
+.mobile-menu a.active {
+  background-color: var(--overlay-bg);
+  color: var(--md-accent);
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+@media (max-width: 800px) and (orientation: portrait) {
+  .sidebar {
+    display: none !important;
+  }
+  
+  .topbar {
+    display: flex;
+  }
+  
+  .topbar-nav {
+    display: none;
+  }
+  
+  .menu-button {
+    display: block;
+  }
+  
+  main {
+    margin-left: 0;
+    padding-top: calc(var(--topbar-height) + 2rem);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 3rem;
+  }
+  
+  footer {
+    margin-left: 0;
+  }
+}

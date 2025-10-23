@@ -1,0 +1,43 @@
+:root {
+  --md-primary: #43ff8e;
+  --md-accent: #ff7043;
+  --md-bg: #121212;
+  --md-surface: #1e1e1e;
+  --md-text: #e0e0e0;
+  --md-border-radius: 0.75rem;
+  --md-font: 'Roboto', sans-serif;
+  --sidebar-width: 260px;
+  --topbar-height: 64px;
+  --transition-speed: 0.3s;
+  --shadow-default: 0 2px 4px rgba(0,0,0,0.4);
+  --overlay-bg: rgba(255,255,255,0.08);
+}
+
+* { 
+  box-sizing: border-box; 
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: var(--md-font);
+  background: var(--md-bg);
+  color: var(--md-text);
+  line-height: 1.6;
+}
+
+main {
+  max-width: 900px;
+  padding: 2rem;
+}
+
+main h2 {
+  color: var(--md-primary);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #aaa;
+  font-size: 0.9rem;
+}
