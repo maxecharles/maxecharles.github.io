@@ -10,6 +10,26 @@
   <link rel="stylesheet" href="assets/css/sidebar.css">
   <link rel="stylesheet" href="assets/css/topbar.css">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Hover preview container */
+    #hover-preview {
+      position: fixed;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 140px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      transition: opacity 180ms ease, transform 180ms ease;
+      opacity: 0;
+      transform: translateY(6px) scale(0.98);
+      z-index: 2000;
+      background: #000;
+    }
+    #hover-preview img { width:100%; height:100%; object-fit:cover; display:block }
+  </style>
 </head>
 
 <body>
@@ -60,30 +80,36 @@
   <main>
     
     <h2>Talks</h2>
+    Hover over the talk entries to see photos!
     <p>
-      <b>The Reign of Viridis</b>
+      <b>AMIGO and the JWST Interferometer</b>
       <ul>
-        <li><i style="color: var(--md-accent);">Best Talk</i> — Mount Stromlo Student Seminar, <i>Mount Stromlo Observatory</i>, Canberra, Australia (2023)</li>
-        <li><i style="color: var(--md-accent);">Guest Lecturer</i> — Intro to Dashboarding and Data Visualisation (QBUS5010), <i>University of Sydney Business School</i>, Australia (2025)</li>
-        <li>Sydney Python Meetup, <i>Microsoft Reactor</i>, Sydney, Australia (2025)</li>
-        <li>Sydney University Mathematical Society Seminar, <i>University of Sydney</i>, Australia (2024)</li>
+        <li data-image="images/talk_photos/brisbane.PNG">Australian Exoplanet Workshop 10, <i>University of Southern Queensland</i>, Brisbane, Australia (2024)</li>
+        <li data-image="images/talk_photos/adelaide.PNG"><i style="color: var(--md-accent);">Best Student Research Talk</i> — Astronomical Society of Australia Annual Scientific Meeting, <i>University of Adelaide</i>, Australia (2025)</li>
+        <li data-image="images/talk_photos/csiro.png">CSIRO Space &amp; Astronomy Co-learnium, <i>Online</i> [Recording <a href="https://www.atnf.csiro.au/research/colearnia/public/20250807_MaxCharles.mp4" style="color: #58a6ff;">here</a>] (2025)</li>
+        <li data-image="images/talk_photos/grenoble.png"><i>Institut de Planétologie et d'Astrophysique</i>, Grénoble, France (2025)</li>
+        <li data-image="images/talk_photos/heidelberg.jpg">NYRIA Workshop, <i>Max-Planck-Institut für Astronomie</i>, Heidelberg, Germany (2025)</li>
+        <li data-image="images/talk_photos/leiden.png"><i>Leiden Observatory</i>, The Netherlands (2025)</li>
       </ul>
-      <b>AMIGO and the James Webb Interferometer</b>
+      <b>The Reign of Viridis (the colormaps talk)</b>
       <ul>
-        <li><i style="color: var(--md-accent);">Best Student Research Talk</i> — Astronomical Society of Australia Annual Scientific Meeting, <i>University of Adelaide</i>, Australia (2025)</li>
-        <li>CSIRO Space & Astronomy Co-learnium, <i>Online</i> [Recording <a href="https://www.atnf.csiro.au/research/colearnia/public/20250807_MaxCharles.mp4" style="color: #58a6ff;">here</a>] (2025)</li>
-        <li><i>Leiden Observatory</i>, The Netherlands (2025)</li>
-        <li><i>Institut de Planétologie et d'Astrophysique</i>, Grénoble, France (2025)</li>
-        <li>NYRIA Workshop, <i>Max-Planck-Institut für Astronomie</i>, Heidelberg, Germany (2025)</li>
-        <li>Australian Exoplanet Workshop, <i>University of Southern Queensland</i>, Brisbane, Australia (2024)</li>
+        <li data-image="images/talk_photos/canberra.jpg"><i style="color: var(--md-accent);">Best Talk</i> — Mount Stromlo Student Seminar, <i>Mount Stromlo Observatory</i>, Canberra, Australia (2023)</li>
+        <li>Sydney University Mathematical Society Seminar, <i>University of Sydney</i>, Australia (2024)</li>
+        <li>Sydney Python Meetup, <i>Microsoft Reactor</i>, Sydney, Australia (2025)</li>
+        <li><i style="color: var(--md-accent);">Guest Lecturer</i> — Intro to Dashboarding and Data Visualisation (QBUS5010), <i>University of Sydney Business School</i>, Australia (2025)</li>
+      </ul>
+      <b>End-to-end Forward Modelling with AMIGO</b>
+      <ul>
+        <li data-image="images/talk_photos/newcastle.jpg"><i style="color: var(--md-accent);">Best Student Talk</i> — Australian Exoplanet Workshop 11, <i>Fort Scratchley</i>, Newcastle, Australia (2025)</li>
       </ul>
       <b>Mitigating Jitter on TOLIMAN</b>
       <ul>
-        <li>SPIE Astronomical Telescopes + Instrumentation, <i>Pacifico Yokohama North</i>, Japan (2024)</li>
+        <li data-image="images/talk_photos/yokohama.JPG">SPIE Astronomical Telescopes + Instrumentation, <i>Pacifico Yokohama North</i>, Japan (2024)</li>
       </ul>
     </p>
     <h2>Education</h2>
     <div class="edu-entry">
+      <div class="edu-entry">
       <h3>Doctor of Philosophy at the <span style="color: var(--md-accent);">University of Sydney</span></h3>
       <p><i>Sydney Institute for Astronomy, School of Physics</i> (2023 – <i>present</i>)</p>
       <ul>
@@ -93,7 +119,8 @@
     </div>
   
     <div class="edu-entry">
-      <h3>Bachelor of Science (Honours) at the <span style="color: var(--md-accent);">University of Sydney</span></h3>
+      <div class="edu-entry">
+      <h3 data-image="images/talk_photos/usyd_grad.jpeg">Bachelor of Science (Honours) at the <span style="color: var(--md-accent);">University of Sydney</span></h3>
       <p><i>Sydney Institute for Astronomy, School of Physics</i> (2022)</p>
       <ul>
         <li>Major in Physics</li>
@@ -105,7 +132,8 @@
     </div>
   
     <div class="edu-entry">
-      <h3>Bachelor of Science at the <span style="color: var(--md-accent);">University of Wollongong</span></h3>
+      <div class="edu-entry">
+      <h3 data-image="images/talk_photos/uow_grad.jpeg">Bachelor of Science at the <span style="color: var(--md-accent);">University of Wollongong</span></h3>
       <p><i>School of Physics, EIS Faculty</i> (2019 – 2021)</p>
       <ul>
         <li>Major in Physics</li>
@@ -132,6 +160,72 @@
         document.getElementById('sidebar').classList.toggle('open');
       }
     }
+  </script>
+
+  <!-- Hover preview container -->
+  <div id="hover-preview" aria-hidden="true"><img src="" alt="preview"></div>
+
+  <script>
+    (function(){
+      const preview = document.getElementById('hover-preview');
+      const previewImg = preview.querySelector('img');
+      const mainEl = document.querySelector('main');
+
+      // Fraction of the main content width to use for preview (change this value)
+      const PREVIEW_FRACTION = 0.6; // e.g. 0.35 = 35% of main text width
+      const PREVIEW_ASPECT = 0.64; // height = width * aspect
+
+      function updatePreviewSize(){
+        const mainW = mainEl ? mainEl.getBoundingClientRect().width : window.innerWidth;
+        const w = Math.max(120, Math.round(mainW * PREVIEW_FRACTION));
+        const h = Math.round(w * PREVIEW_ASPECT);
+        preview.style.width = w + 'px';
+        preview.style.height = h + 'px';
+      }
+
+      function showPreview(src, x, y){
+        if(!src) return;
+        // ensure size is up-to-date
+        updatePreviewSize();
+        previewImg.src = src;
+        preview.style.opacity = '1';
+        preview.style.transform = 'translateY(0) scale(1)';
+        // position with an offset, keep inside viewport
+        const pad = 16;
+        const w = preview.offsetWidth;
+        const h = preview.offsetHeight;
+        let left = x + 18;
+        let top = y + 18;
+        if(left + w + pad > window.innerWidth) left = x - w - 18;
+        if(top + h + pad > window.innerHeight) top = window.innerHeight - h - pad;
+        if(top < pad) top = pad;
+        if(left < pad) left = pad;
+        preview.style.left = left + 'px';
+        preview.style.top = top + 'px';
+      }
+
+      function hidePreview(){
+        preview.style.opacity = '0';
+        preview.style.transform = 'translateY(6px) scale(0.98)';
+        previewImg.src = '';
+      }
+
+      // Attach listeners to any element with data-image
+      const items = document.querySelectorAll('[data-image]');
+      items.forEach(el => {
+        let imgSrc = el.getAttribute('data-image');
+        el.addEventListener('mouseenter', (e)=> showPreview(imgSrc, e.clientX, e.clientY));
+        el.addEventListener('mousemove', (e)=> showPreview(imgSrc, e.clientX, e.clientY));
+        el.addEventListener('mouseleave', hidePreview);
+      });
+
+      // Hide on scroll or resize; also recalc size on resize
+      window.addEventListener('scroll', hidePreview, {passive:true});
+      window.addEventListener('resize', ()=>{ hidePreview(); updatePreviewSize(); });
+
+      // init size
+      updatePreviewSize();
+    })();
   </script>
 </body>
 </html>
