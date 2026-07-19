@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Talks — Max Charles</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700%7CRoboto+Mono&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/sidebar.css">
+  <link rel="stylesheet" href="assets/css/topbar.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Hover preview container */
+    #hover-preview {
+      position: fixed;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 140px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      transition: opacity 180ms ease, transform 180ms ease;
+      opacity: 0;
+      transform: translateY(6px) scale(0.98);
+      z-index: 2000;
+      background: #000;
+    }
+    #hover-preview img { width:100%; height:100%; object-fit:cover; display:block }
+  </style>
+</head>
+
+<body>
+  <div class="sidebar" id="sidebar">
+    <h2 style="display: flex; align-items: center;">
+      Max Charles
+      <img src="images/io_transparent.gif" alt="Max Charles" style="width: 50px; height: 50px; border-radius: 50%; margin-left: 10px;">
+    </h2>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="talks.html" class="active">Talks</a>
+      <a href="music-composition.html">Music — Composition</a>
+      <a href="music-performance.html">Music — Performance</a>
+      <a href="cv.html">CV</a>
+      <img src="images/avatar.jpg" alt="Sidebar Image" style="width: 100%; margin-top: 1em; border-radius: 80px;">
+      <p style="margin-top: 1em; font-size: 0.9em;">
+        <span style="display: flex; align-items: center;"><span class="material-icons" style="font-size: 1.2em; margin-right: 5px;">email</span><a href="mailto:max.charles@sydney.edu.au">max.charles@sydney.edu.au</a></span>
+        <span style="display: flex; align-items: center; margin-top: 0.5em;">
+          <svg style="width: 1.2em; height: 1.2em; margin-right: 5px;" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+          </svg>
+          <a href="https://instagram.com/maxcharles_music" target="_blank">@maxcharles_music</a>
+        </span>
+        <span style="display: flex; align-items: center; margin-top: 0.5em;">
+          <svg style="width: 1.2em; height: 1.2em; margin-right: 5px;" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+          </svg>
+          <a href="https://github.com/maxecharles" target="_blank">maxecharles</a>
+        </span>
+      </p>
+    </nav>
+  </div>
+
+  <div class="topbar" id="topbar">
+    <a href="index.html" class="topbar-brand">
+      Max Charles
+      <img src="images/io_transparent.gif" alt="Max Charles">
+    </a>
+    <nav class="topbar-nav">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="talks.html" class="active">Talks</a>
+      <a href="music-composition.html">Music — Composition</a>
+      <a href="music-performance.html">Music — Performance</a>
+      <a href="cv.html">CV</a>
+    </nav>
+    <span class="material-icons menu-button" onclick="toggleMenu()">menu</span>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="talks.html" class="active">Talks</a>
+    <a href="music-composition.html">Music — Composition</a>
+    <a href="music-performance.html">Music — Performance</a>
+    <a href="cv.html">CV</a>
+  </div>
+
+  <main>
+    <h2>Talks</h2>
+    Hover over the talk entries to see photos!
+    <p>
+      <b>AMIGO and the JWST Interferometer</b>
+      <ul>
+        <li data-image="images/talk_photos/brisbane.PNG">Australian Exoplanet Workshop 10, <i>University of Southern Queensland</i>, Brisbane, Australia (2024)</li>
+        <li data-image="images/talk_photos/adelaide.PNG"><i style="color: var(--md-accent);">Best Student Research Talk</i> — Astronomical Society of Australia Annual Scientific Meeting, <i>University of Adelaide</i>, Australia (2025)</li>
+        <li data-image="images/talk_photos/csiro.png">CSIRO Space &amp; Astronomy Co-learnium, <i>Online</i> [Recording <a href="https://www.atnf.csiro.au/research/colearnia/public/20250807_MaxCharles.mp4" style="color: #58a6ff;">here</a>] (2025)</li>
+        <li data-image="images/talk_photos/grenoble.png"><i>Institut de Planétologie et d'Astrophysique</i>, Grénoble, France (2025)</li>
+        <li data-image="images/talk_photos/heidelberg.jpg">NYRIA Workshop, <i>Max-Planck-Institut für Astronomie</i>, Heidelberg, Germany (2025)</li>
+        <li data-image="images/talk_photos/leiden.png"><i>Leiden Observatory</i>, The Netherlands (2025)</li>
+        <li data-image="images/talk_photos/mas.jpg">Macarthur Astronomical Society, <i>WSU Campbelltown Campus</i>, Australia (2026)</li>
+        <li data-image="images/talk_photos/spie2026.jpg">SPIE Astronomical Telescopes + Instrumentation, <i>Bella Center</i>, Copenhagen (2026)</li>
+      </ul>
+      <b>The Reign of Viridis (the colormaps talk)</b>
+      <ul>
+        <li data-image="images/talk_photos/canberra.jpg"><i style="color: var(--md-accent);">Best Talk</i> — Mount Stromlo Student Seminar, <i>Mount Stromlo Observatory</i>, Canberra, Australia (2023)</li>
+        <li>Sydney University Mathematical Society Seminar, <i>University of Sydney</i>, Australia (2024)</li>
+        <li data-image="images/talk_photos/reactor.jpg">Sydney Python Meetup, <i>Microsoft Reactor</i>, Sydney, Australia (2025)</li>
+        <li><i style="color: var(--md-accent);">Guest Lecturer</i> — Intro to Dashboarding and Data Visualisation (QBUS5010), <i>University of Sydney Business School</i>, Australia (2025)</li>
+        <li data-image="images/talk_photos/maccoffee.jpeg">Astro Coffee, <i>Macquarie University</i>, Sydney, Australia (2026)</li>
+      </ul>
+      <b>End-to-end Forward Modelling with AMIGO</b>
+      <ul>
+        <li data-image="images/talk_photos/newcastle.jpg"><i style="color: var(--md-accent);">Best Student Talk</i> — Australian Exoplanet Workshop 11, <i>Fort Scratchley</i>, Newcastle, Australia (2025)</li>
+        <li data-image="images/talk_photos/bracewell.JPG"> Bracewell @ 70, <i>Macquarie University</i>, Sydney, Australia (2026)</li>
+      </ul>
+      <b>2018 to 2025 (Careers Talk)</b>
+      <ul>
+        <li data-image="images/talk_photos/shhs.JPG"><i>Smith's Hill High School</i>, North Wollongong, Australia (2025)</li>
+      </ul>
+      <b>Mitigating Jitter on TOLIMAN</b>
+      <ul>
+        <li data-image="images/talk_photos/yokohama.JPG">SPIE Astronomical Telescopes + Instrumentation, <i>Pacifico Yokohama North</i>, Japan (2024)</li>
+      </ul>
+    </p>
+
+    <img src="images/banner.jpg" alt="Banner" style="width: 100%; margin-top: 2em;">
+
+  </main>
+  
+  <footer>
+    © 2025 Max Charles · <a href="mailto:max.charles@sydney.edu.au" style="color: #aaaaaa; text-decoration: none;">max.charles@sydney.edu.au</a>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      // Check if we're in portrait mode (topbar) or landscape mode (sidebar)
+      if (window.matchMedia("(max-width: 800px) and (orientation: portrait)").matches) {
+        // Portrait mode - toggle mobile menu
+        document.getElementById('mobile-menu').classList.toggle('open');
+      } else if (window.matchMedia("(max-width: 800px) and (orientation: landscape)").matches) {
+        // Landscape mode - toggle sidebar
+        document.getElementById('sidebar').classList.toggle('open');
+      }
+    }
+  </script>
+
+  <!-- Hover preview container -->
+  <div id="hover-preview" aria-hidden="true"><img src="" alt="preview"></div>
+
+  <script>
+    (function(){
+      const preview = document.getElementById('hover-preview');
+      const previewImg = preview.querySelector('img');
+      const mainEl = document.querySelector('main');
+
+      // Fraction of the main content width to use for preview (change this value)
+      const PREVIEW_FRACTION = 0.6; // e.g. 0.35 = 35% of main text width
+      const PREVIEW_ASPECT = 0.64; // height = width * aspect
+
+      function updatePreviewSize(){
+        const mainW = mainEl ? mainEl.getBoundingClientRect().width : window.innerWidth;
+        const w = Math.max(120, Math.round(mainW * PREVIEW_FRACTION));
+        const h = Math.round(w * PREVIEW_ASPECT);
+        preview.style.width = w + 'px';
+        preview.style.height = h + 'px';
+      }
+
+      function showPreview(src, x, y){
+        if(!src) return;
+        // ensure size is up-to-date
+        updatePreviewSize();
+        previewImg.src = src;
+        preview.style.opacity = '1';
+        preview.style.transform = 'translateY(0) scale(1)';
+        // position with an offset, keep inside viewport
+        const pad = 16;
+        const w = preview.offsetWidth;
+        const h = preview.offsetHeight;
+        let left = x + 18;
+        let top = y + 18;
+        if(left + w + pad > window.innerWidth) left = x - w - 18;
+        if(top + h + pad > window.innerHeight) top = window.innerHeight - h - pad;
+        if(top < pad) top = pad;
+        if(left < pad) left = pad;
+        preview.style.left = left + 'px';
+        preview.style.top = top + 'px';
+      }
+
+      function hidePreview(){
+        preview.style.opacity = '0';
+        preview.style.transform = 'translateY(6px) scale(0.98)';
+        previewImg.src = '';
+      }
+
+      // Attach listeners to any element with data-image
+      const items = document.querySelectorAll('[data-image]');
+      items.forEach(el => {
+        let imgSrc = el.getAttribute('data-image');
+        el.addEventListener('mouseenter', (e)=> showPreview(imgSrc, e.clientX, e.clientY));
+        el.addEventListener('mousemove', (e)=> showPreview(imgSrc, e.clientX, e.clientY));
+        el.addEventListener('mouseleave', hidePreview);
+      });
+
+      // Hide on scroll or resize; also recalc size on resize
+      window.addEventListener('scroll', hidePreview, {passive:true});
+      window.addEventListener('resize', ()=>{ hidePreview(); updatePreviewSize(); });
+
+      // init size
+      updatePreviewSize();
+    })();
+  </script>
+</body>
+</html>
