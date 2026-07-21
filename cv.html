@@ -152,16 +152,61 @@
   <div id="hover-preview" aria-hidden="true"><img src="" alt="preview"></div>
 
   <script>
-    function toggleMenu() {
-      // Check if we're in portrait mode (topbar) or landscape mode (sidebar)
-      if (window.matchMedia("(max-width: 800px) and (orientation: portrait)").matches) {
-        // Portrait mode - toggle mobile menu
-        document.getElementById('mobile-menu').classList.toggle('open');
-      } else if (window.matchMedia("(max-width: 800px) and (orientation: landscape)").matches) {
-        // Landscape mode - toggle sidebar
-        document.getElementById('sidebar').classList.toggle('open');
+    (function(){
+      const preview = document.getElementById('hover-preview');
+      const previewImg = preview.querySelector('img');
+      const mainEl = document.querySelector('main');
+
+      // Fraction of the main content width to use for preview
+      const PREVIEW_FRACTION = 0.6;
+      const PREVIEW_ASPECT = 0.64;
+
+      function updatePreviewSize(){
+        const mainW = mainEl ? mainEl.getBoundingClientRect().width : window.innerWidth;
+        const w = Math.max(120, Math.round(mainW * PREVIEW_FRACTION));
+        const h = Math.round(w * PREVIEW_ASPECT);
+        preview.style.width = w + 'px';
+        preview.style.height = h + 'px';
       }
-    }
+
+      function showPreview(src, x, y){
+        if(!src) return;
+        updatePreviewSize();
+        previewImg.src = src;
+        preview.style.opacity = '1';
+        preview.style.transform = 'translateY(0) scale(1)';
+        const pad = 16;
+        const w = preview.offsetWidth;
+        const h = preview.offsetHeight;
+        let left = x + 18;
+        let top = y + 18;
+        if(left + w + pad > window.innerWidth) left = x - w - 18;
+        if(top + h + pad > window.innerHeight) top = window.innerHeight - h - pad;
+        if(top < pad) top = pad;
+        if(left < pad) left = pad;
+        preview.style.left = left + 'px';
+        preview.style.top = top + 'px';
+      }
+
+      function hidePreview(){
+        preview.style.opacity = '0';
+        preview.style.transform = 'translateY(6px) scale(0.98)';
+        previewImg.src = '';
+      }
+
+      const items = document.querySelectorAll('[data-image]');
+      items.forEach(el => {
+        let imgSrc = el.getAttribute('data-image');
+        el.addEventListener('mouseenter', (e)=> showPreview(imgSrc, e.clientX, e.clientY));
+        el.addEventListener('mousemove', (e)=> showPreview(imgSrc, e.clientX, e.clientY));
+        el.addEventListener('mouseleave', hidePreview);
+      });
+
+      window.addEventListener('scroll', hidePreview, {passive:true});
+      window.addEventListener('resize', ()=>{ hidePreview(); updatePreviewSize(); });
+
+      updatePreviewSize();
+    })();
   </script>
 </body>
 </html>
