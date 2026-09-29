@@ -82,8 +82,8 @@ def inline(tex):
     patterns = [
         (r"\{\\Courier\s*\\fontsize\{[^{}]*\}\{[^{}]*\}\\selectfont\s*([^{}]*)\}", r"<code>\1</code>"),
         (r"\\texttt\{([^{}]*)\}", r"<code>\1</code>"),
-        (r"\\href\{([^{}]*)\}\{([^{}]*)\}", r'<a href="\1" target="_blank">\2</a>'),
-        (r"\\url\{([^{}]*)\}", r'<a href="\1" target="_blank">\1</a>'),
+        (r"\\href\{([^{}]*)\}\{([^{}]*)\}", r'<a href="\1" target="_blank" style="color: #58a6ff;">\2</a>'),
+        (r"\\url\{([^{}]*)\}", r'<a href="\1" target="_blank" style="color: #58a6ff;">\1</a>'),
         (r"\\textbf\{([^{}]*)\}", r"<b>\1</b>"),
         (r"\\(?:textit|emph)\{([^{}]*)\}", r"<i>\1</i>"),
         (r"\\(?:footnotesize|small|textsc|textrm)\{([^{}]*)\}", r"\1"),
